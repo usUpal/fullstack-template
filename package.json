@@ -1,0 +1,16 @@
+{
+  "name": "root",
+  "private": true,
+  "scripts": {
+    "client": "cd ./client && pnpm dev",
+    "services": "cd ./services && pnpm dev",
+    "start": "concurrently \"npm run client\" \"npm run services\""
+  },
+  "workspaces": [
+    "packages/*"
+  ],
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "lerna": "^8.1.6"
+  }
+}
