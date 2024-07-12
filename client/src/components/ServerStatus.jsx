@@ -10,7 +10,7 @@ function ServerStatus() {
 
   useEffect(() => {
     axios
-      .get(`${API_URL}/health`)
+      .get(`${API_URL}/api/v1/health`)
       .then((response) => {
         setServerStatus(response.data.status);
         setIsLoading(false);
